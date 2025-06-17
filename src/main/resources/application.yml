@@ -1,0 +1,27 @@
+server:
+  port: 8080
+#  ssl:
+#    protocol: TLS
+#    key-store: classpath:scs1749984718145_www.zwyy.online_server.pfx
+#    key-store-password: Cs5!$EQhfWxBq7eK
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/question?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1234
+logging:
+  level:
+    com.czw.question: debug
+  pattern:
+    dateformat: HH:mm:ss
+
+czw:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    secret-key: weiwei
+    # 设置jwt过期时间
+    ttl: 7200000
+    # 设置前端传递过来的令牌名称
+    token-name: token
